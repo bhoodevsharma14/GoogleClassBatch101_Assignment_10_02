@@ -1,10 +1,10 @@
 #!/bin/bash -x
 
-	read -p "Enter How Many times you want to flip the coin : " flip_for
+#	read -p "Enter How Many times you want to flip the coin : " flip_for
 
 	heads=0
 	tails=0
-	while (($flip_for))
+	while True
 	do
 
 		flip=$((RANDOM%2))
@@ -16,7 +16,10 @@
 			((tails++))
 		fi
 
-		((flip_for--))
+		if (( $heads==21 || $tails==21 ))
+		then
+			break
+		fi
 
 	done
 
