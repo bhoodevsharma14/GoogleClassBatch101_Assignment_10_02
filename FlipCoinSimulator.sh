@@ -16,12 +16,15 @@
 			((tails++))
 		fi
 
-		if (( $heads==21 || $tails==21 ))
+		if (( $heads==21 ))
 		then
-			break
+				echo "Heads Won by $(($heads-$tails)) points"
+				break
+		elif (( $tails==21 ))
+		then
+				echo "Tails Won by $(($tails-$heads)) points"
+				break
 		fi
 
 	done
 
-	echo "Head Won $heads Times"
-	echo "Tail Won $tails Times"
