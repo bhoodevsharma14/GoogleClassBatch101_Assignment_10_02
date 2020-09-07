@@ -43,7 +43,6 @@
 			done
 
 		done
-		echo "heads $heads ,Tails $tails"
 		if [ $heads -gt $tails ]
 		then
 			extra_score=$(($heads-$tails))
