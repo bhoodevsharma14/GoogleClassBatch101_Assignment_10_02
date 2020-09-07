@@ -49,7 +49,7 @@
 			done
 
 		done
-		echo "heads $heads ,Tails $tails"
+
 		if [ $heads -gt $tails ]
 		then
 			extra_score=$(($heads-$tails))
@@ -58,6 +58,7 @@
 			extra_scre=$(($tails-$heads))
 			echo "After Tie Tails Won by $extra_score"
 		fi
+
 	else
 		echo "Head Won $heads Times"
 		echo "Tail Won $tails Times"
